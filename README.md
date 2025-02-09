@@ -45,7 +45,7 @@ This will pull the latest images and start the backend, frontend, and database c
 
 ### 3. Access the Backend API
 
-- Backend API: [http://localhost:5000](http://localhost:5000)
+- API: [http://localhost:5000](http://localhost:5000)
 
 
 ### 4. Register and Sign In
