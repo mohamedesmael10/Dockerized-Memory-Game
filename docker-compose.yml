@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    image: mohamedesmael/memory-game-backend:latest
+    container_name: memory-game-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET=25f2a961249c526b260e34113e72c165153904d73bf9b2f1e6f44f933c7ac74f
+    restart: unless-stopped
+
+  frontend:
+    image: mohamedesmael/memory-game-frontend:latest
+    container_name: memory-game-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  database:
+    image: mohamedesmael/memory-game-database:latest
+    container_name: memory-game-database
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
+
