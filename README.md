@@ -69,6 +69,11 @@ This will pull the latest images and start the backend, frontend, and database c
 ```sh
 docker-compose down
 ```
+## Docker Images
+
+- Backend Image: `mohamedesmael/memory-game-backend:latest`
+- Database Image: `mohamedesmael/memory-game-database:latest`
+- Frontend Image: `mohamedesmael/memory-game-frontend:latest`
 
 ## Environment Variables
 
@@ -98,4 +103,6 @@ docker logs memory-game-database
 ```sh
 docker-compose restart
 ```
+## Contact
 
+Connect with me on [LinkedIn](https://www.linkedin.com/in/mohamedesmael/).
